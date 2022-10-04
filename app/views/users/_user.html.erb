@@ -1,0 +1,15 @@
+<div id="<%= dom_id user %>">
+  <p>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </p>
+  <p>
+    <strong>Username:</strong>
+    <%= user.username %>
+  </p>
+  <ul>
+    <% user.events.each do |event| %>
+      <li><%= event.title %></li>
+    <% end %>
+  </ul>
+</div>

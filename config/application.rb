@@ -42,6 +42,5 @@ module SampleProject
                        request_specs:    false,
                        controller_specs: false
     end
-    # config.exceptions_app = routes
   end
 end

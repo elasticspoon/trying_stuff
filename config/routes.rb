@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
   get 'errors/not_found'
   get 'errors/internal_server_error'
-  namespace :api, constraints: { subdomain: 'api' }, path: '' do
-    resources :users
-    namespace :v1 do
+  # namespace :api, constraints: { subdomain: 'api' }, path: '' do
+  #   resources :users
+  #   namespace :v1 do
+  #     resources :users
+  #   end
+  # end
+  namespace :api, defaults: { format: :json } do
+    scope module: :v1, constraints: APIConstraints.new(version: 1) do
+      resources :users
+    end
+    scope module: :v2, constraints: APIConstraints.new(version: 2, default: true) do
       resources :users
     end
   end
+
   resources :users
   resources :events
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/bandito/Documents/odin/sample_project/spec/models/event_spec.rb": {
+      "/home/bandito/Documents/odin/sample_project/spec/models/api_key_spec.rb": {
         "lines": [
           1,
           null,
@@ -279,11 +279,12 @@
           null,
           null,
           null,
+          1,
           null,
           null,
           null,
           null,
-          null,
+          1,
           null,
           null,
           null,
@@ -303,6 +304,15 @@
           null,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/home/bandito/Documents/odin/sample_project/spec/factories/api_keys.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -336,10 +346,53 @@
           null,
           null,
           null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/bandito/Documents/odin/sample_project/app/models/api_constraints.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
           null
         ]
       },
       "/home/bandito/Documents/odin/sample_project/app/helpers/application_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/bandito/Documents/odin/sample_project/app/helpers/errors_helper.rb": {
         "lines": [
           1,
           null
@@ -369,12 +422,18 @@
           1
         ]
       },
-      "/home/bandito/Documents/odin/sample_project/app/models/event.rb": {
+      "/home/bandito/Documents/odin/sample_project/app/models/api_key.rb": {
         "lines": [
           1,
           1,
+          null,
+          1,
+          null,
           1,
           0,
+          0,
+          0,
+          null,
           null,
           null
         ]
@@ -387,6 +446,6 @@
         ]
       }
     },
-    "timestamp": 1664910876
+    "timestamp": 1665004756
   }
 }

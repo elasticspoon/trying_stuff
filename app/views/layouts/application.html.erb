@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
-
   <body>
+    <nav>
+      <% if current_user %>
+        <p>Signed in as <%= current_user.name %></p>
+        <%= form_tag(signout_path, method: 'delete', data: {turbo: false}) do %>
+          <button type='submit'>Logout</button>
+        <% end %>
+      <% else %>
+        <%= form_tag('/auth/discord', method: 'post', data: {turbo: false}) do %>
+          <button type='submit'>Login with Discord</button>
+        <% end %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>

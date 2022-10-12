@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'auth/:provider/callback', to: 'sessions#create'
+  delete 'signout', to: 'sessions#destroy', as: 'signout'
   get 'errors/not_found'
   get 'errors/internal_server_error'
   # namespace :api, constraints: { subdomain: 'api' }, path: '' do

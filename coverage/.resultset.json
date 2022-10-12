@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/bandito/Documents/odin/sample_project/spec/models/api_key_spec.rb": {
+      "/home/bandito/Documents/odin/sample_project/spec/models/user_spec.rb": {
         "lines": [
           1,
           null,
@@ -293,6 +293,18 @@
           null
         ]
       },
+      "/home/bandito/Documents/odin/sample_project/config/initializers/omniauth.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/home/bandito/Documents/odin/sample_project/config/initializers/permissions_policy.rb": {
         "lines": [
           null,
@@ -339,6 +351,8 @@
       },
       "/home/bandito/Documents/odin/sample_project/config/routes.rb": {
         "lines": [
+          1,
+          1,
           1,
           1,
           1,
@@ -404,6 +418,12 @@
           null
         ]
       },
+      "/home/bandito/Documents/odin/sample_project/app/helpers/sessions_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/bandito/Documents/odin/sample_project/app/helpers/users_helper.rb": {
         "lines": [
           1,
@@ -422,18 +442,30 @@
           1
         ]
       },
-      "/home/bandito/Documents/odin/sample_project/app/models/api_key.rb": {
+      "/home/bandito/Documents/odin/sample_project/app/models/user.rb": {
         "lines": [
           1,
           1,
-          null,
           1,
           null,
           1,
           0,
+          null,
+          null,
+          1,
+          0,
+          0,
           0,
           0,
           null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          0,
           null,
           null
         ]
@@ -446,6 +478,6 @@
         ]
       }
     },
-    "timestamp": 1665004756
+    "timestamp": 1665160715
   }
 }

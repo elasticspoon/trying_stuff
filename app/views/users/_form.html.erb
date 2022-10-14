@@ -17,7 +17,7 @@
     <%= form.label :username, style: "display: block" %>
     <%= form.text_field :username %>
   </div>
-  <%= form.fields_for 'name[base][]', user.events.last do |event_form| %>
+  <%= form.fields_for :events do |event_form| %>
     <div>
       <%= event_form.label :title, 'Event title' %>
       <%= event_form.text_field :title %>

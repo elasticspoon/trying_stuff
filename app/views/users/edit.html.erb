@@ -1,10 +1,17 @@
 <h1>Editing user</h1>
-
+<%= turbo_frame_tag @user do %>
+  Edittable crap
+  <%= link_to 'go back', @user %>
+  <%= link_to 'return show page', @user, data: { turbo_frame: '_top'} %>
+<% end %>
 <%= render "form", user: @user %>
-
 <br>
-
 <div>
+  <%# note below is somewhat hacky just for a proof of concept %>
+  <%= link_to 'show in tag', @user, data: { turbo_frame: 'user_11'} %>
   <%= link_to "Show this user", @user %> |
   <%= link_to "Back to users", users_path %>
 </div>
+<%= turbo_frame_tag 'empty' do %>
+  Nothing yet
+<% end  %>

@@ -3,7 +3,7 @@
   "name": "Attach with rdbg",
   "request": "attach",
   "rdbgPath": "/home/bandito/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/debug-1.6.2/exe/rdbg",
-  "debugPort": "/run/user/1000/ruby-debug-bandito-1088914",
+  "debugPort": "/run/user/1000/ruby-debug-bandito-1316676",
   "localfs": true,
-  "autoAttach": "0.5173440196484784"
+  "autoAttach": "0.7964362613224235"
 }

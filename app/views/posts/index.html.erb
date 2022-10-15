@@ -1,7 +1,5 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Posts</h1>
-
 <div id="posts">
   <% @posts.each do |post| %>
     <%= render post %>
@@ -10,5 +8,5 @@
     </p>
   <% end %>
 </div>
-
+<%= turbo_frame_tag id='new_post', src: new_post_path, loading: 'lazy' %>
 <%= link_to "New post", new_post_path %>

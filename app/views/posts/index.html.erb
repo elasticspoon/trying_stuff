@@ -1,7 +1,8 @@
 <p style="color: green"><%= notice %></p>
+<p style="color: green"><%= alert %></p>
 <h1>Posts</h1>
 <div id="posts">
-  <% @posts.each do |post| %>
+  <% @posts.limit(5).each do |post| %>
     <%= render post %>
     <p>
       <%= link_to "Show this post", post %>
@@ -10,3 +11,39 @@
 </div>
 <%= turbo_frame_tag id='new_post', src: new_post_path, loading: 'lazy' %>
 <%= link_to "New post", new_post_path %>
+<%# <input data-controller="input"> %>
+<div data-controller="alert">
+  <button data-action="click->alert#show">Alert me!</button>
+</div>
+<div data-controller="greeter">
+  <input type="text" data-greeter-target="name">
+  <button data-action="click->greeter#greet">Greet me</button>
+  <button data-action="click->greeter#alert">Alert me</button>
+  <div data-greeter-target="output"></div>
+</div>
+<%# <button data-controller="counter" data-counter-target="output" data-action="click->counter#addOne"></button> %>
+<button data-controller="counter" data-counter-target="output"
+data-counter-count-value="0" data-action="click->counter#addOne"></button>
+<div data-controller="toggle" data-toggle-change-class="hidden">
+  <span data-toggle-target="target">Some text</span>
+  <button data-action="click->toggle#toggle" >Hide that </button>
+</div>
+<select name="foods" id="foods" data-controller="select">
+  <option value="Pizza">Pizza</option>
+</select>
+<p data-controller="hello"></p>
+<div>
+  <h3>Toggle examples</h3>
+  <div data-controller="toggle" data-toggle-change-class="hidden">
+    <span data-toggle-target="target">Hide this text with button</span>
+    <button data-action="click->toggle#toggle">Hide that text</button>
+  </div>
+  <div data-controller="toggle" data-toggle-change-class="hidden">
+    <button data-action="click->toggle#toggle" style="background-color: red;" class="hidden" data-toggle-target="target">Hide red, show blue</button>
+    <button data-action="click->toggle#toggle" style="background-color: blue;" data-toggle-target="target">Hide blue, show red</button>
+  </div>
+  <div data-controller="toggle" data-toggle-change-class="highlight" data-toggle-target="target">
+    <span>highlight this element?</span>
+    <input type="checkbox" name="highlight" id="highlight" data-action="click->toggle#toggle">
+  </div>
+</div>

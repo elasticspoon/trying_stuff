@@ -46,4 +46,11 @@ data-counter-count-value="0" data-action="click->counter#addOne"></button>
     <span>highlight this element?</span>
     <input type="checkbox" name="highlight" id="highlight" data-action="click->toggle#toggle">
   </div>
+  <div data-controller="input-length">
+    <h3>Input example</h3>
+    <p>This will warn you when you are getting close to 280 chars</p>
+    <input type="text" name="tweet" id="tweet" data-input-length-target="input"
+     data-action="input->input-length#lengthUpdate">
+    <p data-input-length-target="target">initial</p>
+  </div>
 </div>

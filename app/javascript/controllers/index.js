@@ -2,19 +2,22 @@
 // Run that command whenever you add a new controller or create them with
 // ./bin/rails generate stimulus controllerName
 
-import { application } from "./application";
+import { application } from "./application"
 
-import AlertController from "./alert_controller";
-application.register("alert", AlertController);
+import AlertController from "./alert_controller"
+application.register("alert", AlertController)
 
-import CounterController from "./counter_controller";
-application.register("counter", CounterController);
+import CounterController from "./counter_controller"
+application.register("counter", CounterController)
 
-import GreeterController from "./greeter_controller";
-application.register("greeter", GreeterController);
+import GreeterController from "./greeter_controller"
+application.register("greeter", GreeterController)
 
-import HelloController from "./hello_controller";
-application.register("hello", HelloController);
+import HelloController from "./hello_controller"
+application.register("hello", HelloController)
 
-import ToggleController from "./toggle_controller";
-application.register("toggle", ToggleController);
+import InputLengthController from "./input_length_controller"
+application.register("input-length", InputLengthController)
+
+import ToggleController from "./toggle_controller"
+application.register("toggle", ToggleController)

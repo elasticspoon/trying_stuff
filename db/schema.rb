@@ -10,12 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_14_005531) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_17_235248) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "api_keys", force: :cascade do |t|
     t.string "access_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -43,5 +50,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_14_005531) do
     t.string "uid"
   end
 
+  create_table "variants", force: :cascade do |t|
+    t.bigint "car_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "variant_type"
+    t.index ["car_id"], name: "index_variants_on_car_id"
+  end
+
   add_foreign_key "events", "users"
+  add_foreign_key "variants", "cars"
 end

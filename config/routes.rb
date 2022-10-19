@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cars
   resources :posts
   get 'auth/:provider/callback', to: 'sessions#create'
   delete 'signout', to: 'sessions#destroy', as: 'signout'

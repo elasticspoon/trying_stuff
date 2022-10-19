@@ -19,5 +19,8 @@ application.register("hello", HelloController)
 import InputLengthController from "./input_length_controller"
 application.register("input-length", InputLengthController)
 
+import NestedFormController from "./nested_form_controller"
+application.register("nested-form", NestedFormController)
+
 import ToggleController from "./toggle_controller"
 application.register("toggle", ToggleController)

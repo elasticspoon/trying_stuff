@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/bandito/Documents/odin/sample_project/spec/models/user_spec.rb": {
+      "/home/bandito/Documents/odin/sample_project/spec/models/car_spec.rb": {
         "lines": [
           1,
           null,
@@ -329,9 +329,28 @@
           null
         ]
       },
+      "/home/bandito/Documents/odin/sample_project/spec/factories/cars.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/bandito/Documents/odin/sample_project/spec/factories/events.rb": {
         "lines": [
           1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/home/bandito/Documents/odin/sample_project/spec/factories/posts.rb": {
+        "lines": [
           1,
           1,
           1,
@@ -349,8 +368,19 @@
           null
         ]
       },
+      "/home/bandito/Documents/odin/sample_project/spec/factories/variants.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/home/bandito/Documents/odin/sample_project/config/routes.rb": {
         "lines": [
+          1,
+          1,
           1,
           1,
           1,
@@ -406,6 +436,12 @@
           null
         ]
       },
+      "/home/bandito/Documents/odin/sample_project/app/helpers/cars_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
       "/home/bandito/Documents/odin/sample_project/app/helpers/errors_helper.rb": {
         "lines": [
           1,
@@ -413,6 +449,12 @@
         ]
       },
       "/home/bandito/Documents/odin/sample_project/app/helpers/events_helper.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/home/bandito/Documents/odin/sample_project/app/helpers/posts_helper.rb": {
         "lines": [
           1,
           null
@@ -442,31 +484,11 @@
           1
         ]
       },
-      "/home/bandito/Documents/odin/sample_project/app/models/user.rb": {
+      "/home/bandito/Documents/odin/sample_project/app/models/car.rb": {
         "lines": [
           1,
           1,
           1,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
           null
         ]
       },
@@ -478,6 +500,6 @@
         ]
       }
     },
-    "timestamp": 1665160715
+    "timestamp": 1666046103
   }
 }

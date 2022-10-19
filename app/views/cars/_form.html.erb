@@ -1,0 +1,51 @@
+<%= form_with(model: car) do |form| %>
+  <% if car.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+      <ul>
+        <% car.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :model, style: "display: block" %>
+    <%= form.text_field :model %>
+  </div>
+  <%= turbo_frame_tag id="nested-form" do %>
+    <%= form.fields_for :variants do |variant_form| %>
+      <%= variant_form.label :variant_type %>
+      <%= variant_form.text_field :variant_type %>
+    <% end %>
+    <p>rails implementation of adding variants</p>
+    <p>uses a get request and a controller method to build</p>
+    <%= link_to 'add variant', new_car_path(num_variants: (car.variants.size + 1)), data: { turbo_frame: 'nested-form'} %>
+    <%= link_to 'remove variant', new_car_path(num_variants: [(car.variants.size - 1), 0].max), data: { turbo_frame: 'nested-form'} %>
+  <% end %>
+  <div data-controller="nested-form">
+    <div data-nested-form-target="container"></div>
+    <button data-action="click->nested-form#addField:prevent">Add Variant</button>
+    <button data-action="click->nested-form#removeField:prevent">Remove Variant</button>
+    <%# <button data-action="click->nested-form#test">Test button</button> %>
+  </div>
+  <div>
+    <br>
+    <%= form.submit %>
+  </div>
+<% end %>
+<div>
+  <%= form_with url: new_car_path(num_variants: (car.variants.size + 1)), data: { turbo_frame: 'nested-form'} do |form| %>
+    <%= form.hidden_field :_method, value: :get %>
+    <%= form.button 'add variants' %>
+  <% end %>
+  <% form_with url: new_car_path(num_variants: [(car.variants.size - 1), 0].max),  data: { turbo_frame: 'nested_form' } do |form| %>
+    <%= form.hidden_field :_method, value: :get %>
+    <%= form.button 'remove variants'%>
+  <% end %>
+  <%= button_to 'Add', "/cars/new?num_variants=#{car.variants.size + 1}", method: 'get', form: { data: { turbo_frame: 'nested-form'}} %>
+</div>

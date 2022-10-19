@@ -1,0 +1,8 @@
+<h1>New car</h1>
+<%= turbo_frame_tag id="new_car" do %>
+  <%= render "form", car: @car %>
+<% end %>
+<br>
+<div>
+  <%= link_to "Back to cars", cars_path %>
+</div>

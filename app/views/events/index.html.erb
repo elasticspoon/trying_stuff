@@ -1,7 +1,5 @@
 <p style="color: green"><%= notice %></p>
-
 <h1>Events</h1>
-
 <div id="events">
   <% @events.each do |event| %>
     <%= render event %>
@@ -10,5 +8,7 @@
     </p>
   <% end %>
 </div>
-
+<%= turbo_frame_tag id="nested-form" do %>
+  <div>Something</div>
+<% end %>
 <%= link_to "New event", new_event_path %>

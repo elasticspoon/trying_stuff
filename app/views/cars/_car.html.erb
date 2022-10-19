@@ -1,0 +1,13 @@
+<div id="<%= dom_id car %>">
+  <p>
+    <strong>Name:</strong>
+    <%= car.name %>
+  </p>
+  <p>
+    <strong>Model:</strong>
+    <%= car.model %>
+  </p>
+  <% car.variants.each do |variant| %>
+    <p>Variant: <%= variant.variant_type %></p>
+  <% end %>
+</div>

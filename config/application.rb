@@ -42,5 +42,6 @@ module SampleProject
                        request_specs:    false,
                        controller_specs: false
     end
+    config.action_mailer.preview_path = "#{Rails.root}/app/mailers/previews"
   end
 end

@@ -30,6 +30,9 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+
+        UserMailer.with(user: @user).welcome_email.deliver_later
+
         format.html { redirect_to user_url(@user), notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -71,6 +74,6 @@ class UsersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:name, :username, events_attributes: %i[id title _destroy])
+    params.require(:user).permit(:name, :username, :email, events_attributes: %i[id title _destroy])
   end
 end

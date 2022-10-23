@@ -1,0 +1,21 @@
+<!Doctype HTML>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  </head>
+  <body>
+    <h1>Welcome to example.com, <%= @user.name %></h1>
+    <p>
+      You have succesfully signed up, 
+      Your username is <%= @user.username %>
+      <br>
+      params: 
+      <% params.each do |value| %>
+        <%= value %>
+      <% end %>
+    </p>
+    <p>
+      To log in to the site use the link: <%= @url %>
+    </p>
+  </body>
+</html>

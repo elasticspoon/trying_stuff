@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :nestings do
+    get 'some_member', on: :member
+    member do
+      post 'some_member'
+    end
+    collection do
+      get 'some_collection'
+      post 'some_collection'
+    end
+  end
+
   resources :cars
   resources :posts
   get 'auth/:provider/callback', to: 'sessions#create'
